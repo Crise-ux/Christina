@@ -1,0 +1,242 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio de Criselen</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+ <style>
+
+  body {
+  background-image: url("eahh.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container { 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  flex-wrap: wrap; gap: 2rem; 
+  min-height: 100vh; 
+  padding: 2rem; 
+}
+
+.glass-card { 
+  background: rgba(255, 255, 255, 0.15); 
+  border-radius: 20px; 
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37); 
+  backdrop-filter: blur(6px) saturate(180%); 
+  -webkit-backdrop-filter: blur(6px) saturate(180%); 
+  border: 1px solid rgba(255, 255, 255, 0.3); 
+  color: rgba(255, 255, 255, 0.95); 
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); 
+  padding: 2rem; text-align: center; flex: 1 1 300px; 
+  max-width: 900px; 
+  transition: transform 0.3s ease; 
+}
+
+.glass-card:hover 
+{ transform: scale(1.02); 
+}
+
+.glass-card h1, .glass-card h2 
+{ margin-bottom: 1rem; 
+  font-family: 'Press Start 2P', cursive; 
+}
+
+.glass-card h3 { 
+  font-family: 'Courier New', Courier, monospace; 
+  margin-bottom: 1rem; 
+}
+.glass-card button { 
+  padding: 0.6rem 1rem; 
+  font-size: 1rem; border: none; 
+  border-radius: 8px; background: rgba(255, 255, 255, 0.3); 
+  color: white; cursor: pointer; width: 30%; 
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2); 
+  transition: background 0.3s ease, transform 0.3s ease; 
+}
+
+.glass-card button:hover {
+   background: rgba(255, 255, 255, 0.6); 
+   transform: scale(1.05); } .glass-card h1 { 
+    margin: 0 0 1rem 0; font-size: 2.5rem; 
+    font-weight: 200px; color: white; 
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4); 
+    text-align: center; 
+    vertical-align: top; 
+    top: 0; 
+    left: 50%; 
+  } 
+    
+  .glass-card h2 { 
+    margin: 0 0 1rem 0; 
+    font-size: 2rem; 
+    font-weight: 300px; 
+    color: white; 
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4); 
+    text-align: center;
+   }
+
+.vertical-menu {
+  flex: 0 0 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.main-content {
+  flex: 1 1 600px;
+  max-width: 800px;
+}
+
+h1 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+h3 {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.info-section {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .main-content, .vertical-menu {
+    width: 100%;
+    max-width: none;
+  }
+}
+.fade-in {
+  animation: aparecer 0.8s ease forwards;
+  opacity: 0;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+ </style> 
+</head>
+<body>
+  <div class="container">
+    <!-- Menú lateral -->
+    <div class="glass-card vertical-menu" aria-label="Menú de navegación">
+      <i id="iconoHome" class="fa-solid fa-home fa-2x" title="Inicio" style="cursor: pointer;"></i>
+      <i class="fa-solid fa-user fa-2x" title="Perfil" style="cursor: pointer;"></i>
+      <i class="fa-solid fa-envelope fa-2x" title="Contacto" style="cursor: pointer;"></i>
+    </div>
+
+    <!-- inicio -->
+    <div class="glass-card main-content">
+      <h1 id="tituloNombre">Criselen Bruces</h1>
+<h3 id="subtituloBienvenida">Bienvenido a mi portafolio</h3>
+
+<!-- Información del perfil -->
+ <div id="perfil" class="info-section" style="display: none;">
+  <h2><strong>¡Hola! Soy Criselen</strong></h2>
+ <h3><strong>¿Quién soy?</strong> Soy una estudiante de programación con un enfoque en el desarrollo web. Me encanta aprender nuevas tecnologías y crear proyectos interesantes</h3>
+<h3><strong>¿Qué hago?</strong> Diseño interfaces, desarrollo proyectos web y exploro nuevas ideas tecnológicas.</h3>
+</div>
+
+<!-- Sección de contacto -->
+<div id="contacto" class="info-section" style="display: none;">
+  <h2><strong>Contáctame</strong></h2>
+  <h3><a href="https://www.instagram.com/hunt3r.ry/" target="_blank">📸 Instagram</a></h3>
+  <h3><a href="https://web.telegram.org/a/" target="_blank">📲 Telegram</a></h3>
+  <h3><a href="mailto:chryselenebruss@gmail.com">📧 Gmail</a></h3>
+</div>
+
+
+
+ <script>
+// función para mostrar el perfil al hacer clic en el icono de usuario
+  document.addEventListener("DOMContentLoaded", () => {
+    const iconoHome = document.getElementById("iconoHome");
+    const perfil = document.getElementById("perfil");
+    const perfilIcon = document.querySelector(".fa-user");
+    const contenedorPrincipal = document.querySelector(".main-content");
+    const tituloNombre = document.getElementById("tituloNombre");
+    const subtituloBienvenida = document.getElementById("subtituloBienvenida");
+    const contactoIcon = document.querySelector(".fa-envelope");
+const contacto = document.getElementById("contacto");
+
+contactoIcon.addEventListener("click", () => {
+  // Oculta otras secciones
+  perfil.style.display = "none";
+  tituloNombre.style.display = "none";
+  subtituloBienvenida.style.display = "none";
+
+  // Muestra la sección de contacto
+  contacto.style.display = contacto.style.display === "none" ? "block" : "none";
+  tituloNombre.style.display = "none";
+  subtituloBienvenida.style.display = "none";
+
+  if (contacto.style.display === "block") {
+    contacto.classList.add("fade-in");
+    contenedorPrincipal.style.height = "auto";
+  } else {
+    contacto.classList.remove("fade-in");
+    contenedorPrincipal.style.height = "500px";
+  }
+});
+
+
+    iconoHome.addEventListener("click", () => {
+      tituloNombre.style.display = "block";
+      subtituloBienvenida.style.display = "block";
+      perfil.style.display = "none";
+      contacto.style.display = "none";
+      contenedorPrincipal.style.height = "auto";
+    });
+
+    perfilIcon.addEventListener("click", () => {
+      perfil.style.display = perfil.style.display === "none" ? "block" : "none";
+      tituloNombre.style.display = "none";
+      subtituloBienvenida.style.display = "none";
+      contacto.style.display = "none";
+      if (perfil.style.display === "block") {
+        perfil.classList.add("fade-in");
+        contenedorPrincipal.style.height = "auto";
+      } else {
+        perfil.classList.remove("fade-in");
+        contenedorPrincipal.style.height = "500px";
+      }
+    });
+  });
+</script>
